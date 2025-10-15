@@ -3,6 +3,9 @@ import classes from "./page.module.css";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({ params }) {
   const meal = await getMeal(params.slug);
 
